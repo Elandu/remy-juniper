@@ -1,0 +1,16 @@
+lfhelp:
+  desc: "Remy's Lost & Found — how to play."
+  args:
+    - ""
+explore:
+  desc: "Head out to look for something. Omit the area to see where you can go."
+  args:
+    - ""
+grab:
+  desc: "Claim the object Remy just dropped here."
+  args:
+    - ""
+shelf:
+  desc: "Shows a collection profile."
+  args:
+    - ""

@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <AssemblyName>lost_and_found</AssemblyName>
+    <RootNamespace>LostAndFound</RootNamespace>
+    <DebugType>Embedded</DebugType>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS8632</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Nadeko.Medusa" Version="5.*-*">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="8.0.10" />
+  </ItemGroup>
+
+  <!--
+    The Nadeko v6 host already loads Microsoft.Data.Sqlite + SQLitePCLRaw (EF Core) and the
+    native provider. Shipping our own copies makes the collectible MedusaAssemblyLoadContext
+    load a duplicate SQLite provider, which throws on hot-reload
+    ("AssemblyLoadContext is unloading or was already unloaded" in SQLitePCLRaw.batteries_v2).
+    Bind to the host's copy instead: keep them compile-time only, drop them from the deploy output.
+  -->
+  <Target Name="RemoveHostProvidedSqliteFromPublish" AfterTargets="ComputeFilesToPublish">
+    <ItemGroup>
+      <ResolvedFileToPublish Remove="@(ResolvedFileToPublish)"
+        Condition="'%(ResolvedFileToPublish.Filename)' == 'Microsoft.Data.Sqlite'
+                Or '%(ResolvedFileToPublish.Filename)' == 'Microsoft.Data.Sqlite.Core'
+                Or '%(ResolvedFileToPublish.Filename)' == 'SQLitePCLRaw.batteries_v2'
+                Or '%(ResolvedFileToPublish.Filename)' == 'SQLitePCLRaw.core'
+                Or '%(ResolvedFileToPublish.Filename)' == 'SQLitePCLRaw.provider.e_sqlite3'
+                Or '%(ResolvedFileToPublish.Filename)' == 'SQLitePCLRaw.lib.e_sqlite3'
+                Or '%(ResolvedFileToPublish.Filename)' == 'e_sqlite3'
+                Or '%(ResolvedFileToPublish.Filename)' == 'libe_sqlite3'" />
+    </ItemGroup>
+  </Target>
+
+  <ItemGroup>
+    <None Update="res.yml;cmds.yml;strings/**;config.json;assets/**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

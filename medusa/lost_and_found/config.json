@@ -1,0 +1,90 @@
+{
+  "enabled": true,
+  "allowedGuilds": [],
+  "timeZone": "Australia/Sydney",
+
+  "dailyExpeditions": 1,
+  "encounterChancePercent": 30,
+  "maxRecentDiscoveries": 8,
+
+  "secretAreaCompletedSets": 5,
+  "setCompletionScoreBonus": 40,
+  "secretScoreBonus": 25,
+
+  "xpCurve": {
+    "earlyMax": 5,
+    "earlyBase": 100,
+    "earlyStep": 50,
+    "midMax": 20,
+    "midBase": 300,
+    "midStep": 150,
+    "lateBase": 2500,
+    "lateGrowth": 1.15
+  },
+
+  "relic": {
+    "minLevel": 20,
+    "minCompletedSets": 3,
+    "chancePercent": 1.5,
+    "minExpeditionsBetween": 0
+  },
+
+  "drops": {
+    "enabled": true,
+    "chancePerMessage": 0.015,
+    "minMessagesBetween": 35,
+    "cooldownMinutes": 25,
+    "maxActivePerChannel": 1,
+    "claimTimeoutMinutes": 30,
+    "copies": 1,
+    "parcelChance": 0.1,
+    "channels": [],
+    "ignoredChannels": [],
+    "minMessageLength": 4
+  },
+
+  "questing": {
+    "enabled": true,
+    "perWeek": 3
+  },
+
+  "rarityWeights": {
+    "Common": 55,
+    "Uncommon": 24,
+    "Rare": 13,
+    "Epic": 6,
+    "Legendary": 2
+  },
+  "xpByRarity": {
+    "Common": 8,
+    "Uncommon": 14,
+    "Rare": 25,
+    "Epic": 45,
+    "Legendary": 90,
+    "SarahRelic": 200
+  },
+  "tokensByRarity": {
+    "Common": 1,
+    "Uncommon": 2,
+    "Rare": 4,
+    "Epic": 8,
+    "Legendary": 20,
+    "SarahRelic": 50
+  },
+  "collectionValueByRarity": {
+    "Common": 1,
+    "Uncommon": 2,
+    "Rare": 5,
+    "Epic": 10,
+    "Legendary": 25,
+    "SarahRelic": 100
+  },
+  "scrapValueByRarity": {
+    "Common": 1,
+    "Uncommon": 2,
+    "Rare": 5,
+    "Epic": 10,
+    "Legendary": 25,
+    "SarahRelic": 50
+  }
+}
