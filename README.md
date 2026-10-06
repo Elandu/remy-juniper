@@ -6,8 +6,9 @@ source, no fork.
 
 ## Contents
 - `config/` — Nadeko YAML config + `xp_template.json` + AI prompts
-- `medusa/juniper_community/` — the only compiled artifact (a Medusa plugin: `.menu`, `.pins`, `.pin`)
-- `docs/` — BRANDING, COMMUNITY_SETUP, CUSTOM_PATCHES, assets
+- `medusa/juniper_community/` — community Medusa plugin (`.menu`, `.pins`, `.pin`, drops)
+- `medusa/lost_and_found/` — "Remy's Lost & Found" collection-game Medusa (see `docs/LOST_AND_FOUND.md`)
+- `docs/` — BRANDING, COMMUNITY_SETUP, LOST_AND_FOUND, CUSTOM_PATCHES, assets
 - `seed/juniper.sql` — DB rows (aliases, permissions, XP rewards, shop, expressions, greet, feed, statuses, colours)
 - `scripts/` — the apply scripts used during initial setup (reference)
 

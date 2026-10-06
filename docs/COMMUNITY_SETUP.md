@@ -159,3 +159,32 @@ Verify with `.menu`, `.daily`, `.balance`, `.store`, `.profile`, `.levels`.
 - Set the application/bot **name** to `Juniper`.
 - Upload the **avatar** (see `assets/README.md`).
 - No intent changes required beyond what is already enabled (Message Content, Server Members, Presence).
+
+## 16. LOST & FOUND  (`lost_and_found` Medusa)
+
+A second Medusa plugin: a Remy-themed collection game. Fully separate from
+`juniper_community` (which owns `.menu`/`.pins`). Full documentation lives in
+[`LOST_AND_FOUND.md`](LOST_AND_FOUND.md).
+
+- **Artifact:** `medusa/lost_and_found/` (built dll + `assets/`, `cmds.yml`,
+  `res.yml`, `config.json`).
+- **Data:** own SQLite at `data/lostfound.db`. Tokens are written into Nadeko's
+  `DiscordUser.CurrencyAmount`.
+- **Commands:** `.explore`, `.grab`, `.sets`, `.shelf`, `.inventory`, `.item`,
+  `.gift`, `.trade`, `.recycle`, `.craft`, `.equip`/`.unequip`, `.quests`,
+  `.encounter`/`.lfchoose`, `.openparcel`/`.giftparcel`, `.collectiontop`,
+  `.lfhelp`. Owner-only: `.lfspawn`, `.lfgive`, `.lfresetdaily`, `.lfsetlevel`,
+  `.lfdebug`, `.lfreload`.
+- **Deploy:** copy the built folder to
+  `/mnt/user/appdata/nadeko/data/medusae/lost_and_found/`, add `lost_and_found`
+  to `loaded:` in `data/medusae/medusa.yml`, restart the `nadeko` container. The
+  log should show `Loaded medusa 'lost_and_found'`.
+- **Per-server config:** set `drops.channels` to the drop channel ids and
+  `allowedGuilds` if serving multiple guilds, then `.lfreload`.
+- **Preserved custom files (add to the do-not-overwrite list):**
+  - `data/medusae/lost_and_found/`
+  - `data/lostfound.db`
+
+The curated `.menu` (still served by `juniper_community`) now lists the Lost &
+Found entry points; `.pins` / `.pin` / drops behaviour in `juniper_community` is
+unchanged.
