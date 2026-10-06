@@ -1,0 +1,8 @@
+creds.yml
+*.db
+*.db-wal
+*.db-shm
+*token*
+.env
+medusa/**/bin/
+medusa/**/obj/

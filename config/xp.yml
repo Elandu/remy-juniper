@@ -1,0 +1,59 @@
+# DO NOT CHANGE
+version: 11
+# How much XP will the users receive per message
+textXpPerMessage: 3
+# How often can the users receive XP, in seconds
+textXpCooldown: 300
+# Amount of xp users gain from posting an image
+textXpFromImage: 3
+# Average amount of xp earned per minute in VC
+voiceXpPerMinute: 1
+# Xp Shop config
+shop:
+  isEnabled: false
+  frames:
+    default:
+      name: No frame
+      price: 0
+      url: ''
+    charcoal:
+      name: Charcoal
+      price: 500
+      url: ''
+    sage:
+      name: Sage
+      price: 500
+      url: ''
+    mauve:
+      name: Mauve
+      price: 500
+      url: ''
+  bgs:
+    default:
+      name: Default Background
+      price: 0
+      url: ''
+    charcoal:
+      name: Charcoal
+      price: 500
+      url: ''
+    sage:
+      name: Sage
+      price: 500
+      url: ''
+    mauve:
+      name: Mauve
+      price: 500
+      url: ''
+    static:
+      name: Static
+      price: 500
+      url: ''
+    cloudy:
+      name: Cloudy
+      price: 500
+      url: ''
+    garden:
+      name: Garden
+      price: 500
+      url: ''

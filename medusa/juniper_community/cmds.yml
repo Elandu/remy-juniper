@@ -1,0 +1,12 @@
+menu:
+  desc: "Juniper's member menu — the main help command."
+  args:
+    - ""
+pins:
+  desc: "Shows your unlocked Pins."
+  args:
+    - ""
+pin:
+  desc: "Shows the Pins unlocked by the specified user."
+  args:
+    - "@Someone"
