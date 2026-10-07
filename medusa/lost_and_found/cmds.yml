@@ -1,0 +1,118 @@
+lfhelp:
+  desc: "Remy's Lost & Found — how to play."
+  args:
+    - ""
+explore:
+  desc: "Head out to look for something. Omit the area to see where you can go."
+  args:
+    - ""
+    - "garden"
+grab:
+  desc: "Claim the object Remy just dropped here."
+  args:
+    - ""
+sets:
+  desc: "Shows your set progress and completions."
+  args:
+    - ""
+shelf:
+  desc: "Shows a collection profile."
+  args:
+    - ""
+    - "@Someone"
+inventory:
+  desc: "Lists everything you've kept."
+  args:
+    - ""
+item:
+  desc: "Details for a single item."
+  args:
+    - "Midnight Rose"
+gift:
+  desc: "Give one item to someone."
+  args:
+    - "@Someone Midnight Rose"
+recycle:
+  desc: "Break an item down into Scraps. Add confirm to spend your last copy."
+  args:
+    - "Odd Sock"
+    - "Odd Sock confirm"
+craft:
+  desc: "List recipes, or craft one by name."
+  args:
+    - ""
+    - "Mixed Tape"
+equip:
+  desc: "Wear a charm (one at a time)."
+  args:
+    - "Studio Capo"
+unequip:
+  desc: "Take your charm off."
+  args:
+    - ""
+quests:
+  desc: "Shows this week's side quests and progress."
+  args:
+    - ""
+lfquests:
+  desc: "Alias of .quests — this week's side quests and progress."
+  args:
+    - ""
+lfchoose:
+  desc: "Pick an option in a pending encounter."
+  args:
+    - "1"
+encounter:
+  desc: "Shows a pending encounter."
+  args:
+    - ""
+openparcel:
+  desc: "Open a mystery parcel."
+  args:
+    - ""
+giftparcel:
+  desc: "Give a mystery parcel to someone."
+  args:
+    - "@Someone"
+collectiontop:
+  desc: "Collection score leaderboard."
+  args:
+    - ""
+trade:
+  desc: "Offer an item to someone. They accept or decline."
+  args:
+    - "@Someone Midnight Rose"
+tradeaccept:
+  desc: "Accept the most recent trade offer sent to you."
+  args:
+    - ""
+tradedecline:
+  desc: "Decline the most recent trade offer sent to you."
+  args:
+    - ""
+lfspawn:
+  desc: "Owner only: spawn a drop here (or a random one)."
+  args:
+    - ""
+    - "Golden Tennis Ball"
+lfgive:
+  desc: "Owner only: give an item to a user."
+  args:
+    - "@Someone Golden Tennis Ball"
+lfresetdaily:
+  desc: "Owner only: reset a user's daily expeditions."
+  args:
+    - "@Someone"
+lfsetlevel:
+  desc: "Owner only: set a user's Explorer level."
+  args:
+    - "@Someone 20"
+lfdebug:
+  desc: "Owner only: raw player state."
+  args:
+    - ""
+    - "@Someone"
+lfreload:
+  desc: "Owner only: reload config and content."
+  args:
+    - ""

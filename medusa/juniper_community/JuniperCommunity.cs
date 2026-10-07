@@ -140,6 +140,12 @@ public sealed class JuniperCommunity : Snek
                 "`.trivia` — trivia\n" +
                 "`.hangman` — hangman\n" +
                 "`.minesweeper` — minesweeper\n\n" +
+                "**LOST & FOUND**\n" +
+                "`.explore` — look for something with Remy\n" +
+                "`.grab` — claim what Remy drops\n" +
+                "`.shelf` — your collection profile\n" +
+                "`.sets` — set progress\n" +
+                "`.lfhelp` — everything else\n\n" +
                 "**USEFUL**\n" +
                 "`.afk` — set an AFK message\n" +
                 "`.remind` — set a reminder\n" +
